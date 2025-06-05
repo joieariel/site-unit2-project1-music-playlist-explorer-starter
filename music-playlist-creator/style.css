@@ -2,5 +2,143 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: 	#E5EAF5;
+
 }
+
+
+/* for fixed footer */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*main grows to take up all available space*/
+main {
+    flex: 1;
+}
+header {
+    background-color: #A0D2EB;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: #A0D2EB;
+    border-top: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.playlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#playlist-cards {
+    display: flex;
+    flex-wrap: wrap; /* wrap the cards onto multiple lines*/
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* style the containers with the images
+make them a fixed size so they will format correctly*/
+img {
+    height: 400x;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    background-color: #D0BDF4;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 40px;
+    padding: 30px;
+}
+
+/*new dynamic cards */
+.playlist-card {
+    background-color: #D0BDF4;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 40px;
+    padding: 30px;
+}
+/*fix the size of the image for each playlist*/
+.playlist-card-img{
+    height: 400px;
+    width: 400px;
+}
+
+
+
+/* Modal */
+.modal-overlay {
+    /*display: none;*/ /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+ }
+
+
+ /* Style the top part of the modal: image on the left, text on the right */
+.modal-top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-songs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#modalSongImage {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+ .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+ }
+ .close:hover,
+ .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+ }
+
+ /* end of modal */
+
+ /*modal styling */

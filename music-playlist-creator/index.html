@@ -3,24 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="wrapper">
     <header>
-        <!-- Your header content here -->
+        <h1>Music Playlist Explorer</h1>
     </header>
 
-    <main> 
-        <!-- Your main content here -->
+    <main>
+        <section id="playlist-cards">
+
+            <div class="card">
+                <img src="assets/img/playlist.png" alt="Playlist image">
+                <h2>Playlist 1</h2>
+                <p class="creator">Creator 1</p>
+                <p class="likes"> Likes: 5</p>
+            </div>
+
+            <div class="card">
+                <img src="assets/img/playlist.png" alt="Playlist image">
+                <h2>Playlist 2</h2>
+                <p class="creator">Creator 2</p>
+                <p class="likes"> Likes: 7</p>
+            </div>
+
+            <div class="card">
+                <img src="assets/img/playlist.png" alt="Playlist image">
+                <h2>Playlist 3</h2>
+                <p class="creator">Creator 3</p>
+                <p class="likes"> Likes: 1</p>
+            </div>
+
+
+            <div class="card">
+                <img src="assets/img/playlist.png" alt="Playlist image">
+                <h2>Playlist 4</h2>
+                <p class="creator">Creator 4</p>
+                <p class="likes"> Likes: 2</p>
+            </div>
+
+            <div class="card">
+                <img src="assets/img/playlist.png" alt="Playlist image">
+                <h2>Playlist 5</h2>
+                <p class="creator">Creator 5</p>
+                <p class="likes"> Likes: 10</p>
+            </div>
+
+            <div class="card">
+                <img src="assets/img/playlist.png" alt="Playlist image">
+                <h2>Playlist 6</h2>
+                <p class="creator">Creator 6</p>
+                <p class="likes"> Likes: 15</p>
+            </div>
+
+            <div class="card">
+                <img src="assets/img/playlist.png" alt="Playlist image">
+                <h2>Playlist 7</h2>
+                <p class="creator">Creator 7</p>
+                <p class="likes"> Likes: 13</p>
+            </div>
+
+            <div class="card">
+                <img src="assets/img/playlist.png" alt="Playlist image">
+                <h2>Playlist 8</h2>
+                <p class="creator">Creator 8</p>
+                <p class="likes"> Likes: 8</p>
+            </div>
+
+
+        </section>
     </main>
 
+    <!-- Modal Structure -->
+    <div id="playlist-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+        <!--top of modal -->
+        <div class="modal-top">
+            <img id="modal-playlist-image" src="assets/img/playlist.png" alt="Playlist image">
+            <div class="modal-text">
+                <h2 id="modal-title">Playlist Title</h2>
+                <h3 id="modal-creator">Creator Name</h3>
+            </div>
+        </div>
+        <!--songs-->
+        <div class="modal-songs">
+            <!--songs here-->
+            <img id="modalSongImage" src="assets/img/song.png" alt="Song Image">
+            <div class="song-text">
+                <h3 class="song-title">Song Title</h3>
+                <p class="song-artist">Artist Name</p>
+                <p class="album-name">Album Name</p>
+                <p class="song-duration">0:00</p>
+            </div>
+             <!--song 2-->
+            <img id="modalSongImage" src="assets/img/song.png" alt="Song Image">
+            <div class="song-text">
+                <h3 class="song-title">Song Title2</h3>
+                <p class="song-artist">Artist Name2</p>
+                <p class="album-name">Album Name2</p>
+                <p class="song-duration">1:00</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+
     <footer>
-        <!-- Your footer content here -->
+        <p>&copy; Joie's 2025 Playlist Explorer</p>
     </footer>
+    </div>
+
+
+    <!--
+    <div onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
+        Click here for festival details!
+     </div>
+     -->
+
+
     <script src="data/data.js"></script>
     <script src="script.js"></script>
 </body>
