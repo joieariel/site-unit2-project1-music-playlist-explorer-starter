@@ -46,52 +46,14 @@ window.onclick = function (event) {
 
 
 
-// load playlists from local storage
-let savedPlaylists = localStorage.getItem('playlists');
-if (savedPlaylists) {
-   try {
-      // parse the saved playlists
-      const parsedPlaylists = JSON.parse(savedPlaylists);
-
-      // update  playlists with saved data
-      // keep the like counts between page refreshes
-      parsedPlaylists.forEach((savedPlaylist, index) => {
-         if (index < playlists.length) {
-            playlists[index].likes = savedPlaylist.likes;
-         }
-      });
-   } catch (error) {
-      console.error('Error loading playlists from local storage:', error);
-   }
-}
-
-// load liked playlists from local storage
+// initialize in-memory tracking of liked playlists
 let likedPlaylists = {};
-const savedLikedPlaylists = localStorage.getItem('likedPlaylists');
-if (savedLikedPlaylists) {
-   try {
-      likedPlaylists = JSON.parse(savedLikedPlaylists);
-   } catch (error) {
-      console.error('Error loading liked playlists from local storage:', error);
-   }
-}
 
-// function to save playlists to local storage
 function savePlaylists() {
-   try {
-      localStorage.setItem('playlists', JSON.stringify(playlists));
-   } catch (error) {
-      console.error('Error saving playlists to local storage:', error);
-   }
+   // got rid of local storage was causing an error
 }
 
-// function to save liked playlists to local storage
 function saveLikedPlaylists() {
-   try {
-      localStorage.setItem('likedPlaylists', JSON.stringify(likedPlaylists));
-   } catch (error) {
-      console.error('Error saving liked playlists to local storage:', error);
-   }
 }
 
 const container = document.getElementById('playlist-cards');

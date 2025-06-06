@@ -149,7 +149,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
--
+- I think I was able to walk through my project well, however I think I could have explained things more clearly, but the nerves got in the way. I would like to try having a more structured presentation, either a deck or a list of what features to go through so I know what to talk about.
 
 ### Open-source libraries used
 
@@ -159,4 +159,4 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
-- Shout out the the entire CodePath team. Go Cohort 1, woot woot! Special shoutout to Ebony and Erika for their wonderful lessons. As well as, Virsaviya
+- Shout out the the entire CodePath team. Go Cohort 1, woot woot! Special shoutout to Ebony and Erika for their wonderful lessons. As well as, Virsaviya for being so supportive during our 1:1. Paulo and Matthew also helped with a lot of minor issues I had, and Thomas has the most encouraging energy! So grateful for everyone.
