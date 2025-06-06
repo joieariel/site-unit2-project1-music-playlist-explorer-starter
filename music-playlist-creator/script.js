@@ -275,12 +275,12 @@ function displayRandomPlaylist() {
          document.querySelector('.featured-playlist-cover') !== null;
       console.log("Is featured page:", isFeaturedPage);
 
-      // Force update for featured page regardless of URL check
+      // force update for featured page regardless of URL check
       const featuredPlaylistCover = document.querySelector('.featured-playlist-cover');
       const featuredPlaylistTitle = document.querySelector('.featured-playlist-title');
       const songsRightSection = document.querySelector('.songs-right');
 
-      // If we have the featured page elements, we're on the featured page
+      // if we have the featured page elements, we're on the featured page
       if (featuredPlaylistCover || featuredPlaylistTitle || songsRightSection) {
          // Get the elements we need to update
          const featuredPlaylistCover = document.querySelector('.featured-playlist-cover');
