@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Featured Playlist</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <h1>Featured Playlist</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <!-- active status so featured shows on featured page-->
+          <li><a href="index.html">All</a></li>
+          <li><a href="featured.html" class="active">Featured</a></li>
+        </ul>
+      </nav>
+
+    <main class="featured-layout">
+        <section class="playlist-left">
+            <img class="featured-playlist-cover" src="assets/img/playlist.png" alt="playlist image">
+            <h2 class="featured-playlist-title">Playlist's Title</h2>
+        </section>
+
+        <section class="songs-right">
+            <!--song cards dynamically added her-->
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Joie's 2025 Playlist Explorer</p>
+    </footer>
+    </div>
+
+
+    <script src="data/data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        //  the random playlist is displayed when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Featured page loaded, display random playlist");
+
+            // error checking
+            if (typeof playlists !== 'undefined' && playlists.length > 0) {
+                // random playlist selection
+                const randomIndex = Math.floor(Math.random() * playlists.length);
+                const randomPlaylist = playlists[randomIndex];
+
+                console.log("Selected random playlist:", randomPlaylist.playlist_name);
+
+                const featuredPlaylistCover = document.querySelector('.featured-playlist-cover');
+                const featuredPlaylistTitle = document.querySelector('.featured-playlist-title');
+                const songsRightSection = document.querySelector('.songs-right');
+
+                if (featuredPlaylistCover) {
+                    featuredPlaylistCover.src = randomPlaylist.playlist_art;
+                    featuredPlaylistCover.alt = randomPlaylist.playlist_name;
+                }
+
+                if (featuredPlaylistTitle) {
+                    featuredPlaylistTitle.textContent = randomPlaylist.playlist_name;
+                }
+
+                if (songsRightSection) {
+                    // clears existing song cards
+                    songsRightSection.innerHTML = '';
+
+                    // songs from the random playlist
+                    randomPlaylist.songs.forEach((song, index) => {
+                        const songCard = document.createElement('div');
+                        songCard.className = 'song-card';
+
+                        songCard.innerHTML = `
+                            <p class="song-title">${index + 1}. ${song.title}</p>
+                            <p class="song-artist">${song.artist}</p>
+                            <p class="song-album">${song.album}</p>
+                            <p class="song-duration">${song.duration}</p>
+                        `;
+
+                        songsRightSection.appendChild(songCard);
+                    });
+                }
+            } else {
+                console.error("Playlists not available");
+            }
+        });
+    </script>
+</body>
+</html>

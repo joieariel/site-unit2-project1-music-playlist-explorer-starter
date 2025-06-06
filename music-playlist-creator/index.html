@@ -13,69 +13,21 @@
     <div class="wrapper">
     <header>
         <h1>Music Playlist Explorer</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search playlists... (press Enter)">
+            <button id="search-clear" class="search-button clear-button">Clear</button>
+        </div>
     </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">All</a></li>
+            <li><a href="featured.html">Featured</a></li>
+        </ul>
+      </nav>
 
     <main>
         <section id="playlist-cards">
-
-            <div class="card">
-                <img src="assets/img/playlist.png" alt="Playlist image">
-                <h2>Playlist 1</h2>
-                <p class="creator">Creator 1</p>
-                <p class="likes"> Likes: 5</p>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/playlist.png" alt="Playlist image">
-                <h2>Playlist 2</h2>
-                <p class="creator">Creator 2</p>
-                <p class="likes"> Likes: 7</p>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/playlist.png" alt="Playlist image">
-                <h2>Playlist 3</h2>
-                <p class="creator">Creator 3</p>
-                <p class="likes"> Likes: 1</p>
-            </div>
-
-
-            <div class="card">
-                <img src="assets/img/playlist.png" alt="Playlist image">
-                <h2>Playlist 4</h2>
-                <p class="creator">Creator 4</p>
-                <p class="likes"> Likes: 2</p>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/playlist.png" alt="Playlist image">
-                <h2>Playlist 5</h2>
-                <p class="creator">Creator 5</p>
-                <p class="likes"> Likes: 10</p>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/playlist.png" alt="Playlist image">
-                <h2>Playlist 6</h2>
-                <p class="creator">Creator 6</p>
-                <p class="likes"> Likes: 15</p>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/playlist.png" alt="Playlist image">
-                <h2>Playlist 7</h2>
-                <p class="creator">Creator 7</p>
-                <p class="likes"> Likes: 13</p>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/playlist.png" alt="Playlist image">
-                <h2>Playlist 8</h2>
-                <p class="creator">Creator 8</p>
-                <p class="likes"> Likes: 8</p>
-            </div>
-
-
+            <!-- playlist cards dynamically added here -->
         </section>
     </main>
 
@@ -85,6 +37,7 @@
             <span class="close">&times;</span>
         <!--top of modal -->
         <div class="modal-top">
+            <button class="shuffle-button">Shuffle</button>
             <img id="modal-playlist-image" src="assets/img/playlist.png" alt="Playlist image">
             <div class="modal-text">
                 <h2 id="modal-title">Playlist Title</h2>
@@ -93,22 +46,7 @@
         </div>
         <!--songs-->
         <div class="modal-songs">
-            <!--songs here-->
-            <img id="modalSongImage" src="assets/img/song.png" alt="Song Image">
-            <div class="song-text">
-                <h3 class="song-title">Song Title</h3>
-                <p class="song-artist">Artist Name</p>
-                <p class="album-name">Album Name</p>
-                <p class="song-duration">0:00</p>
-            </div>
-             <!--song 2-->
-            <img id="modalSongImage" src="assets/img/song.png" alt="Song Image">
-            <div class="song-text">
-                <h3 class="song-title">Song Title2</h3>
-                <p class="song-artist">Artist Name2</p>
-                <p class="album-name">Album Name2</p>
-                <p class="song-duration">1:00</p>
-            </div>
+            <!-- songs dynamically added here -->
         </div>
     </div>
 
