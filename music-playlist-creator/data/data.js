@@ -4,13 +4,14 @@ const playlists = [
      "playlist_name": "Neo-Soul",
      "playlist_author": "Jeremiah",
      "playlist_art": "assets/img/blond.jpg",
-     "likes": 0,
+     "likes": 15,
      "songs": [
        {
            title: "Nights",
            artist: "Frank Ocean",
            album: "Blonde",
            duration: "3:30",
+           image: "assets/img/blond.jpg",
        },
        {
            title: "Go Baby",
@@ -31,13 +32,14 @@ const playlists = [
      "playlist_name": "Classical",
      "playlist_author": "Amaya",
      "playlist_art": "assets/img/moon.jpg",
-     "likes": 0,
+     "likes": 8,
      "songs": [
        {
            title: "Moonlight Sonata",
            artist: "Beethoven",
            album: "Moonlight Sonata",
            duration: "5:20",
+           image: "assets/img/moon.jpg",
        },
        {
            title: "Canon in D",
@@ -85,13 +87,14 @@ const playlists = [
        "playlist_name": "Oldies",
        "playlist_author": "Mya",
        "playlist_art": "assets/img/micheal.jpg",
-       "likes": 0,
+       "likes": 23,
        "songs": [
          {
            title: "Billie Jean",
            artist: "Michael Jackson",
            album: "Thriller",
            duration: "4:54",
+           image: "assets/img/micheal.jpg",
          },
 
          {
@@ -113,7 +116,7 @@ const playlists = [
        "playlist_name": "Pop Hits",
        "playlist_author": "Joie",
        "playlist_art": "assets/img/pharrell.jpeg",
-       "likes": 0,
+       "likes": 35,
        "songs": [
          {
            title: "Cruel Summer",
@@ -141,13 +144,14 @@ const playlists = [
        "playlist_name": "Musicals",
        "playlist_author": "Arianna",
        "playlist_art": "assets/img/hamilton.jpeg",
-       "likes": 0,
+       "likes": 42,
        "songs": [
          {
            title: "Wait For It",
            artist: "Leslie Odom Jr",
            album: "Hamilton",
            duration: "3:13",
+           image: "assets/img/hamilton.jpeg",
          },
          {
            title: "Seize the Day",
@@ -168,7 +172,7 @@ const playlists = [
        "playlist_name": "Afrobeats",
        "playlist_author": "Dara",
        "playlist_art": "assets/img/afrobeats.png",
-       "likes": 0,
+       "likes": 35,
        "songs": [
          {
            title: "Last Last",

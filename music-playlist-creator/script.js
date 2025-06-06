@@ -34,10 +34,10 @@ function openModal(playlistData) {
    modal.style.display = "block";
 }
 
-span.onclick = function() {
+span.onclick = function () {
    modal.style.display = "none";
 }
-window.onclick = function(event) {
+window.onclick = function (event) {
    if (event.target == modal) {
       modal.style.display = "none";
    }
@@ -107,8 +107,8 @@ const createPlaylists = (playlists) => {
    }
 
 
-playlists.forEach((playlist) => {
-   const card = document.createElement('div');
+   playlists.forEach((playlist) => {
+      const card = document.createElement('div');
       card.className = 'playlist-card';
 
       card.innerHTML = `
@@ -121,6 +121,7 @@ playlists.forEach((playlist) => {
       <div class="like-container">
       <span class="like-count">${playlist.likes}</span>
       <button class="like-btn">❤</button>
+      <button class="delete-btn">Delete</button>
       </div>
       `
 
@@ -172,11 +173,37 @@ playlists.forEach((playlist) => {
          saveLikedPlaylists();
       });
 
-      //append the card to the container
-      container.appendChild(card);
+      // select the delete button and add a click event listener
+      const deleteBtn = card.querySelector('.delete-btn');
+      deleteBtn.addEventListener('click', (event) => {
+         event.stopPropagation(); // stop click from opening modal
+
+         // find the index of this playlist in the playlists array
+         const playlistIndex = playlists.findIndex(p => p.playlistID === playlist.playlistID);
+
+         // remove the playlist if found
+         if (playlistIndex !== -1) {
+            playlists.splice(playlistIndex, 1);
+
+            // remove from liked playlists if it was liked
+            if (likedPlaylists[playlist.playlistID]) {
+               delete likedPlaylists[playlist.playlistID];
+               saveLikedPlaylists();
+            }
+
+            // save updated playlists to local storage
+            savePlaylists();
+
+            // update the display
+            createPlaylists(playlists);
+         }
       });
 
-   }
+      //append the card to the container
+      container.appendChild(card);
+   });
+
+}
 
 createPlaylists(playlists);
 
@@ -245,7 +272,7 @@ function displayRandomPlaylist() {
    try {
       // check that we are on the featured page by looking at the URL or page elements
       const isFeaturedPage = window.location.pathname.includes('featured.html') ||
-                            document.querySelector('.featured-playlist-cover') !== null;
+         document.querySelector('.featured-playlist-cover') !== null;
       console.log("Is featured page:", isFeaturedPage);
 
       // Force update for featured page regardless of URL check
@@ -335,7 +362,7 @@ function filterPlaylists(query) {
    createPlaylists(filteredPlaylists);
 }
 
-// Function to handle search submission
+// handle search submission
 function handleSearch() {
    const searchInput = document.getElementById('search-input');
    if (searchInput) {
@@ -372,16 +399,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
    // search functionality
    const searchInput = document.getElementById('search-input');
+   const searchButton = document.getElementById('search-button');
    const searchClear = document.getElementById('search-clear');
 
    if (searchInput && searchClear) {
-      // seearch only when Enter is pressed
+      // search when Enter is pressed
       searchInput.addEventListener('keypress', (event) => {
          if (event.key === 'Enter') {
             handleSearch();
          }
       });
 
+      // search when search button is clicked
+      if (searchButton) {
+         searchButton.addEventListener('click', () => {
+            handleSearch();
+         });
+      }
 
       searchClear.addEventListener('click', () => {
          clearSearch();

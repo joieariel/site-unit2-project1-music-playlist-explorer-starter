@@ -175,7 +175,21 @@ img {
     height: 400px;
     width: 400px;
 }
+/* style the text in the card */
+.delete-btn {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.delete-btn:hover {
+    background-color: #A0D2EB;
+}
 
 
 /* Modal */
