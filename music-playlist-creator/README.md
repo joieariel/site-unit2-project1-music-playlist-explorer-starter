@@ -133,7 +133,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
+
 
 <div>
     <a href="https://www.loom.com/share/cfed47a1734f4bd1a7c9e690695be418">
